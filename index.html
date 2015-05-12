@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Get Your Site's Pinterest Pin Count</title>
+
+<meta name="description" content="Check your Pinterest Pin Count on Any Page or Blog Post. It's that simple!" />
+
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" />
+<link href="css/main.css" rel="stylesheet" />
+
+<!-- Custom Favicon -->
+<link rel="shortcut icon" href="http://cdn2.pinterestplugin.com/wp-content/uploads/2013/07/pinterest-icon-16.png"/>
+
+</head>
+<body>
+
+<h1 id="page_title"><a href="#">Get Your Site's Pinterest Pin Count</a></h1>
+<h2>Quickly check your pin count on any page or blog post</h2>
+
+<div id="input_box">
+    <form class="form-inline" method="GET">
+        <input type="text" id="url_to_check" name="url" class="input-xxlarge" placeholder="Enter your URL (example: pinterest.com)">
+        <button type="submit" class="btn btn-large btn-success">Get Pin Count</button>
+    </form>
+</div>
+
+<div id="results"></div>
+
+<div id="promo" class="alert alert-success">
+    <strong>Brought to you by the creator of the <a class="alert-success" href="http://pinterestplugin.com/pin-it-button-lite?utm_source=pin_count_tool&utm_medium=button&utm_campaign=pin_count_tool" target="_blank">"Pin It" Button WordPress Plugin</a></strong><br/>
+	<h3>Now downloaded <span id="num_downloads"></span> times!</h3>
+    
+	<h3>Do you need a flexible "Pin It" Button for your WordPress site?</h3>
+	
+    <p>
+        <a class="btn btn-large btn-danger" href="http://pinterestplugin.com/?utm_source=pin_count_tool&utm_medium=button&utm_campaign=pin_count_tool">Check out the "Pin It" Button Pro WordPress Plugin</a>
+    </p>
+</div>
+
+<div id="share_buttons">
+    <h3>Was this tool useful to you? Spread the Word!</h3>
+    
+    <table>
+        <tr>
+            <td style="vertical-align: top;">
+                <!-- Pinterest -->
+				<a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fpinterestplugin.com%2F&media=http%3A%2F%2Fpinterestplugin.com%2Fimg%2Fget-pinterest-pin-count.png&description=A%20useful%20tool%20for%20testing%20Pinterest%20pin%20counts%20on%20your%20site." data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
+            </td>
+            <td>
+                <!-- FB Like -->
+                <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpinterestplugin.com%2Fpincount%2F&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=144056775628952" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+            </td>
+            <td>
+                <!--Tweet-->
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://pinterestplugin.com/pincount/" data-text="Want to Know Your Site's Pinterest Pin Count?" alt="Tweet this!">Tweet</a>
+            </td>
+            <td>
+                <!-- Google Share -->
+                <div class="g-plus" data-action="share" data-annotation="bubble"></div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div id="url_variation_container">
+    <h3>URL Breakdown</h3>
+    
+    <table id="url_variation_table" class="table table-striped">
+        <thead>
+            <th>Exact URL*</th>
+            <th>Pin Count</th>
+        </thead>
+    </table>
+	
+	<p class="note">
+		* Pinterest currently treats each URL variation separately
+	</p>
+</div>
+
+
+<!-- BEGIN Pin Count Tests --->
+
+<!--
+<h3>one image beside</h3>
+<a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fpinterestplugin.com%2F&media=http%3A%2F%2Fpinterestplugin.com%2Fimg%2Fget-pinterest-pin-count.png&description=A%20useful%20tool%20for%20testing%20Pinterest%20pin%20counts%20on%20your%20site." data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
+
+<h3>one image above</h3>
+<a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fpinterestplugin.com%2F&media=http%3A%2F%2Fpinterestplugin.com%2Fimg%2Fget-pinterest-pin-count.png&description=A%20useful%20tool%20for%20testing%20Pinterest%20pin%20counts%20on%20your%20site." data-pin-do="buttonPin" data-pin-config="above"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
+
+<h3>one image none</h3>
+<a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fpinterestplugin.com%2F&media=http%3A%2F%2Fpinterestplugin.com%2Fimg%2Fget-pinterest-pin-count.png&description=A%20useful%20tool%20for%20testing%20Pinterest%20pin%20counts%20on%20your%20site." data-pin-do="buttonPin" data-pin-config="none"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
+-->
+
+<!--
+<h3>any image beside</h3>
+<a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
+
+<h3>any image above</h3>
+<a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
+
+<h3>any image none</h3>
+<a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
+
+<h3>any image w/url</h3>
+<a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fpinterestplugin.com%2F" data-pin-do="buttonBookmark" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
+-->
+
+<!-- END Testing -->
+
+<img id="pinnable_image" src="img/get-pinterest-pin-count.png" alt="Get Your Site's Pinterest Pin Count" title="Pin Me!" />
+
+<!-- JavaScript in footer -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="js/jquery.xdomainajax.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Sharing button JavaScript -->
+<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27619829-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>

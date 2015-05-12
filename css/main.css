@@ -1,0 +1,82 @@
+body {
+    margin: 5% 5% 0 5%;
+    text-align: center;
+}
+
+a {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h1 a,
+h1 a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    text-decoration: none;
+}
+
+#input_box {
+    margin: 40px 0;
+}
+
+#url_to_check {
+    font-size: 24px;
+    height: auto;
+    line-height: 1em;
+}
+
+#results {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.3em;
+    margin: 0 auto 30px auto;
+}
+
+#share_buttons {
+    margin: 0 auto 30px auto;
+    text-align: center;
+    width: 100%;
+}
+
+#share_buttons table {
+    display: inline-block;
+}
+
+#share_buttons table tr td {
+    min-width: 105px;
+    text-align: left;
+}
+
+#promo {
+    margin: 0 auto 30px auto;
+    width: 600px;
+}
+
+#url_variation_container {
+    display: none;
+    margin: 0 auto 30px auto;
+    width: 400px;
+}
+
+#notes h2 {
+    text-align: center;
+}
+
+#pinnable_image {
+	display: none;
+}
