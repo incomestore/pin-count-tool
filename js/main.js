@@ -1,12 +1,7 @@
 var homeUrl = "http://pinplugins.com/pincount/";
 
-/*** New API call -- 12/27/2012 ***/
-var baseApiUrl = "http://api.pinterest.com/v1/urls/count.json?callback=?";
-//Example: http://api.pinterest.com/v1/urls/count.json?callback=receiveCount&url=http://pinterest.com/
-
-/*** Old API call ***/
-//var baseApiUrl = "http://api.pinterest.com/v1/urls/count.json?callback=?";
-//Example: http://api.pinterest.com/v1/urls/count.json?callback=receiveCount&url=http://pinterest.com/
+var baseApiUrl = "https://widgets.pinterest.com/v1/urls/count.json?callback=?";
+//Example: https://widgets.pinterest.com/v1/urls/count.json?callback=receiveCount&url=http://pinterest.com/
 
 var mainUrlCount = 0;
 
