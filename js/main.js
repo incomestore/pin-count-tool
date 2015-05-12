@@ -112,19 +112,25 @@ function processSampleUrls() {
 
 //Get # of downloads for free button (jquery screen scrape)
 function getFreePluginDownloadNum() {
-    //References:
-    //http://jsfiddle.net/skelly/m4QCt/
-    //https://github.com/padolsey/jQuery-Plugins/tree/master/cross-domain-ajax
+	// References:
+	// https://codex.wordpress.org/WordPress.org_API
+	// http://code.tutsplus.com/tutorials/communicating-with-the-wordpress-org-plugin-api--wp-33069
 
-    $.get("http://wordpress.org/extend/plugins/pinterest-pin-it-button/", function(data) {
-        // load the response into jquery element
-        // form tags are needed to get the entire html,head and body
-        $html = $('<form>' + data.responseText + '</form>');
+	var pluginApiBaseUrl = '//api.wordpress.org/plugins/info/1.0/pinterest-pin-it-button.json';
 
-        //Get count by splitting text elements by space and "popping" last one out
-        $pluginData = $.trim($html.find("div.col-3 p:first").text().trim().split(" ").pop());
-        $("#num_downloads").text($pluginData);
-    });
+	/*
+	$.getJSON(pluginApiBaseUrl, function(data) {
+		$("#num_downloads").text(addCommasToNum(data.downloaded));
+	});
+	*/
+
+	$.ajax({
+		url: pluginApiBaseUrl,
+		dataType: "jsonp",
+		success: function(data) {
+			$("#num_downloads").text(addCommasToNum(data.downloaded));
+		}
+	});
 }
 
 //Add "http://" or "https://" to URL if no prefix
