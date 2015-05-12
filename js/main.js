@@ -116,13 +116,13 @@ function getFreePluginDownloadNum() {
     //http://jsfiddle.net/skelly/m4QCt/
     //https://github.com/padolsey/jQuery-Plugins/tree/master/cross-domain-ajax
 
-    $.get("http://wordpress.org/extend/plugins/pinterest-pin-it-button/", function(data) {
+    $.get("https://wordpress.org/plugins/pinterest-pin-it-button/stats/", function(data) {
         // load the response into jquery element
         // form tags are needed to get the entire html,head and body
         $html = $('<form>' + data.responseText + '</form>');
 
         //Get count by splitting text elements by space and "popping" last one out
-        $pluginData = $.trim($html.find("div.col-3 p:first").text().trim().split(" ").pop());
+        $pluginData = $html.find("#history").find(".last-child td").text();
         $("#num_downloads").text($pluginData);
     });
 }
