@@ -1,4 +1,4 @@
-var homeUrl = "http://pinterestplugin.com/pincount/";
+var homeUrl = "http://pinplugins.com/pincount/";
 
 /*** New API call -- 12/27/2012 ***/
 var baseApiUrl = "http://api.pinterest.com/v1/urls/count.json?callback=?";
