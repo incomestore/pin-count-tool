@@ -1,0 +1,22 @@
+# Mac crap
+.DS_Store
+
+# Windows crap
+ehthumbs.db
+Thumbs.db
+
+# PhpStorm IDE
+.idea
+
+# Netbeans IDE
+nbproject
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# Zip files
+*.zip
+
+# POT files
+*.pot
